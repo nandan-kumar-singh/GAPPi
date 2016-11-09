@@ -1,4 +1,4 @@
-package me.songning.mvp;
+package me.songning.mvp.ui;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import me.songning.mvp.R;
 import me.songning.mvp.base.BaseActivity;
 import me.songning.mvp.bean.Gank;
 import me.songning.mvp.mvp.contract.MainContract;
