@@ -13,7 +13,7 @@ import okhttp3.Response;
  * Created by Nicholas on 2016/11/6.
  */
 
-public class NetWorkInterceptor implements Interceptor {
+public class NetworkInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {

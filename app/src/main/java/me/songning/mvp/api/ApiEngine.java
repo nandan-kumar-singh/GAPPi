@@ -35,7 +35,7 @@ public class ApiEngine {
                 .connectTimeout(12, TimeUnit.SECONDS)
                 .writeTimeout(12, TimeUnit.SECONDS)
                 .writeTimeout(12, TimeUnit.SECONDS)
-                .addNetworkInterceptor(new NetWorkInterceptor())
+                .addNetworkInterceptor(new NetworkInterceptor())
                 .addInterceptor(loggingInterceptor)
                 .cache(cache)
                 .build();

@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+import java.util.Random;
 
 import me.songning.mvp.R;
 import me.songning.mvp.base.BaseActivity;
@@ -25,21 +27,26 @@ public class MainActivity extends BaseActivity<MainPresenter>
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private ProgressDialog mDialog;
+    private Toolbar mToolbar;
+    private FloatingActionButton mFab;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+        mTextView= (TextView) findViewById(R.id.tv);
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
 
         mDialog = new ProgressDialog(this);
         mDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         mDialog.setCancelable(false);
         mDialog.setMessage("正在加载...");
 
-        FloatingActionButton fab =  (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mPresenter.getGank();
@@ -59,8 +66,11 @@ public class MainActivity extends BaseActivity<MainPresenter>
 
     @Override
     public void onSucceed(Gank data) {
+
         Toast.makeText(this,"请求成功",Toast.LENGTH_SHORT).show();
         List<Gank.Result> results = data.getResults();
+        mTextView.setText(results.get(new Random().nextInt(10)).toString());
+
         for (Gank.Result result : results) {
             Log.e(TAG, result.toString());
         }
