@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
-        mTextView= (TextView) findViewById(R.id.tv);
+        mTextView = (TextView) findViewById(R.id.tv);
         mFab = (FloatingActionButton) findViewById(R.id.fab);
 
         mDialog = new ProgressDialog(this);
@@ -67,7 +67,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
     @Override
     public void onSucceed(Gank data) {
 
-        Toast.makeText(this,"请求成功",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "请求成功", Toast.LENGTH_SHORT).show();
         List<Gank.Result> results = data.getResults();
         mTextView.setText(results.get(new Random().nextInt(10)).toString());
 
@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
     @Override
     public void onFail(String err) {
         Log.e(TAG, err);
-        Toast.makeText(this,"请求失败",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "请求失败", Toast.LENGTH_SHORT).show();
     }
 
     @Override
