@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment;
 
 public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
 
-    private P mPresenter;
+    protected P mPresenter;
 
     @Override
     public void onResume() {
