@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2017. Nandan.
+ */
+
 package me.songning.mvp.api;
 
 import java.io.File;
@@ -11,9 +15,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Nicholas on 2016/10/30.
- */
 
 public class ApiEngine {
 
@@ -22,11 +23,11 @@ public class ApiEngine {
 
     private ApiEngine() {
 
-        //日志拦截器
+        //Log interceptor
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-        //缓存
+        //Cache
         int size = 1024 * 1024 * 100;
         File cacheFile = new File(App.getContext().getCacheDir(), "OkHttpCache");
         Cache cache = new Cache(cacheFile, size);

@@ -1,16 +1,16 @@
-package me.songning.mvp.mvp.contract;
+package me.songning.mvp.mvp.main;
 
 import me.songning.mvp.base.BaseModel;
 import me.songning.mvp.base.BasePresenter;
 import me.songning.mvp.base.BaseView;
-import me.songning.mvp.bean.Gank;
+import me.songning.mvp.model.Gank;
 import rx.Observable;
 
 /**
- * Created by Nicholas on 2016/10/30.
+ * Created by Nandan on 2016/10/30.
  */
 
-public interface MainContract {
+public interface IMainInteracter {
 
     interface View extends BaseView {
 

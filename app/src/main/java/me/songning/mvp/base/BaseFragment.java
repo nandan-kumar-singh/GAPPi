@@ -3,7 +3,7 @@ package me.songning.mvp.base;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by Nicholas on 2016/11/5.
+ * Created by Nandan on 2016/11/5.
  */
 
 public abstract class BaseFragment<P extends BasePresenter> extends Fragment {

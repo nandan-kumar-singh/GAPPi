@@ -5,7 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 /**
- * Created by Nicholas on 2016/11/5.
+ * Created by Nandan on 2016/11/5.
  */
 
 public class NetUtil {
@@ -13,7 +13,7 @@ public class NetUtil {
     NetUtil() {/* cannot be instantiated */}
 
     /**
-     * 判断网络是否连接
+     * Determine whether the network is connected
      *
      * @param context Context
      * @return 网络是否连接
@@ -35,10 +35,10 @@ public class NetUtil {
     }
 
     /**
-     * 判断是否是wifi连接
+     * To determine whether it is wifi connection
      *
      * @param context Context
-     * @return 是否是wifi连接
+     * @return Whether it is wifi connection
      */
     public static boolean isWifi(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context

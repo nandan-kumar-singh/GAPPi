@@ -1,10 +1,11 @@
+/*
+ * Copyright (c) 2017. Nandan.
+ */
+
 package me.songning.mvp;
 
 import android.app.Application;
 
-/**
- * Created by Nicholas on 2016/11/5.
- */
 
 public class App extends Application {
 

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2017. Nandan.
+ */
+
 package me.songning.mvp.api;
 
 import java.io.IOException;
@@ -9,9 +13,7 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by Nicholas on 2016/11/6.
- */
+
 
 public class NetworkInterceptor implements Interceptor {
 
@@ -20,7 +22,7 @@ public class NetworkInterceptor implements Interceptor {
 
         Request request = chain.request();
 
-        //无网络时强制使用缓存
+        //No cache is used when there is no network
         if (!NetUtil.isConnected(App.getContext())) {
             request = request.newBuilder()
                     .cacheControl(CacheControl.FORCE_CACHE)
@@ -30,14 +32,14 @@ public class NetworkInterceptor implements Interceptor {
         Response response = chain.proceed(request);
 
         if (NetUtil.isConnected(App.getContext())) {
-            // 有网络时，设置超时为0
+            // When there is a network, set the timeout to 0
             int maxStale = 0;
             response.newBuilder()
                     .header("Cache-Control", "public, max-age=" + maxStale)
-                    .removeHeader("Pragma")// 清除头信息，因为服务器如果不支持，会返回一些干扰信息，不清除下面无法生效
+                    .removeHeader("Pragma")// Clear the header information, because if the server does not support, will return some interference information, do not clear the following can not take effect
                     .build();
         } else {
-            // 无网络时，设置超时为3周
+            // When there is no network, set the timeout to 3 weeks
             int maxStale = 60 * 60 * 24 * 21;
             response.newBuilder()
                     .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)

@@ -1,12 +1,12 @@
 package me.songning.mvp.api;
 
-import me.songning.mvp.bean.Gank;
+import me.songning.mvp.model.Gank;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import rx.Observable;
 
 /**
- * Created by Nicholas on 2016/10/30.
+ * Created by Nandan on 2016/10/30.
  */
 
 public interface ApiService {

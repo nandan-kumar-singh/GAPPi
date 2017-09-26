@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by Nicholas on 2016/10/30.
+ * Created by Nandan on 2016/10/30.
  */
 
 public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {

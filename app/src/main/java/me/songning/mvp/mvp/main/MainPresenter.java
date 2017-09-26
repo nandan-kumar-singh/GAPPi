@@ -1,28 +1,28 @@
-package me.songning.mvp.mvp.presenter;
+/*
+ * Copyright (c) 2017. Nandan.
+ */
 
-import me.songning.mvp.bean.Gank;
-import me.songning.mvp.mvp.contract.MainContract;
-import me.songning.mvp.mvp.model.MainModel;
+package me.songning.mvp.mvp.main;
+
+import me.songning.mvp.model.Gank;
 import rx.Subscriber;
 import rx.Subscription;
 
 /**
- * Created by Nicholas on 2016/10/30.
+ * Created by Nandan on 2016/10/30.
  */
 
-public class MainPresenter extends MainContract.Presenter {
+public class MainPresenter extends IMainInteracter.Presenter {
 
-    public MainPresenter(MainContract.View view) {
+    public MainPresenter(IMainInteracter.View view) {
         mView = view;
         mModel = new MainModel();
     }
 
     @Override
     public void getGank() {
-
         Subscription subscribe = mModel.getGank()
                 .subscribe(new Subscriber<Gank>() {
-
                     @Override
                     public void onStart() {
                         mView.showDialog();
@@ -44,6 +44,7 @@ public class MainPresenter extends MainContract.Presenter {
                         mView.onSucceed(gank);
                     }
                 });
+
 
 
         addSubscribe(subscribe);
