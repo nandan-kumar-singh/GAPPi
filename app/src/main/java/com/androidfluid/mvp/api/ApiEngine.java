@@ -2,12 +2,12 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.api;
+package com.androidfluid.mvp.api;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import com.songning.mvp.App;
+import com.androidfluid.mvp.App;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.ui.activity;
+package com.androidfluid.mvp.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,22 +20,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.songning.mvp.base.BaseActivity;
-import com.songning.mvp.mvp.main.IMainInteracter;
-import com.songning.mvp.mvp.main.MainPresenter;
+import com.androidfluid.mvp.R;
+import com.androidfluid.mvp.base.BaseActivity;
+import com.androidfluid.mvp.model.Gank;
+import com.androidfluid.mvp.mvp.main.IMainInteracter;
+import com.androidfluid.mvp.mvp.main.MainPresenter;
 
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
-import com.songning.mvp.R;
-
-import com.songning.mvp.model.Gank;
-
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.schedulers.TimeInterval;
 
 
 public class MainActivity extends BaseActivity<MainPresenter>
@@ -73,7 +65,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
 
     private void initViews() {
 
-        Observable.interval(new Random().nextInt(10), TimeUnit.SECONDS)
+        /*Observable.interval(new Random().nextInt(10), TimeUnit.SECONDS)
                 .timeInterval()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<TimeInterval<Long>>() {
@@ -81,7 +73,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
                     public void call(TimeInterval<Long> longTimeInterval) {
                         Toast.makeText(MainActivity.this, "Time: " + longTimeInterval, Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
 
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

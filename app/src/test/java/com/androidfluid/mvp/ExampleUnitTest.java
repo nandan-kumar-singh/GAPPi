@@ -1,4 +1,8 @@
-package com.songning.mvp;
+/*
+ * Copyright (c) 2017. Nandan.
+ */
+
+package com.androidfluid.mvp;
 
 import org.junit.Test;
 

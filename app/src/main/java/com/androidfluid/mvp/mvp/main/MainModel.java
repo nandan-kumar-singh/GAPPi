@@ -2,11 +2,11 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.mvp.main;
+package com.androidfluid.mvp.mvp.main;
 
-import com.songning.mvp.api.ApiEngine;
-import com.songning.mvp.model.Gank;
-import com.songning.mvp.rx.RxSchedulers;
+import com.androidfluid.mvp.api.ApiEngine;
+import com.androidfluid.mvp.model.Gank;
+import com.androidfluid.mvp.rx.RxSchedulers;
 
 import rx.Observable;
 

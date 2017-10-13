@@ -2,18 +2,19 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.ui.activity;
+package com.androidfluid.mvp.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.androidfluid.mvp.R;
+import com.androidfluid.mvp.base.BaseActivity;
+import com.androidfluid.mvp.mvp.login.ISplashInteracter;
+import com.androidfluid.mvp.mvp.login.SplashPresenter;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.songning.mvp.R;
-import com.songning.mvp.base.BaseActivity;
-import com.songning.mvp.mvp.login.ISplashInteracter;
-import com.songning.mvp.mvp.login.SplashPresenter;
 
 public class SplashActivity extends BaseActivity<SplashPresenter> implements ISplashInteracter.View {
 

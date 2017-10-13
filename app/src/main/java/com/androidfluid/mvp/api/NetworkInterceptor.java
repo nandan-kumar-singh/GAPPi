@@ -2,12 +2,12 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.api;
+package com.androidfluid.mvp.api;
 
 import java.io.IOException;
 
-import com.songning.mvp.App;
-import com.songning.mvp.util.NetUtil;
+import com.androidfluid.mvp.App;
+import com.androidfluid.mvp.util.NetUtil;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.Request;

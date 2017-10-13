@@ -2,9 +2,9 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.mvp.main;
+package com.androidfluid.mvp.mvp.main;
 
-import com.songning.mvp.model.Gank;
+import com.androidfluid.mvp.model.Gank;
 import rx.Subscriber;
 import rx.Subscription;
 

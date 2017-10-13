@@ -2,9 +2,9 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.api;
+package com.androidfluid.mvp.api;
 
-import com.songning.mvp.model.Gank;
+import com.androidfluid.mvp.model.Gank;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import rx.Observable;

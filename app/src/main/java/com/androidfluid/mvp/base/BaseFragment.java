@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.base;
+package com.androidfluid.mvp.base;
 
 import android.support.v4.app.Fragment;
 

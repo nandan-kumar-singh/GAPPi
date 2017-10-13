@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.base;
+package com.androidfluid.mvp.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

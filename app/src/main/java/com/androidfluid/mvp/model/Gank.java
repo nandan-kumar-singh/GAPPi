@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.model;
+package com.androidfluid.mvp.model;
 
 import java.util.List;
 

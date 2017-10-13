@@ -2,12 +2,12 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.mvp.main;
+package com.androidfluid.mvp.mvp.main;
 
-import com.songning.mvp.base.BaseModel;
-import com.songning.mvp.base.BasePresenter;
-import com.songning.mvp.base.BaseView;
-import com.songning.mvp.model.Gank;
+import com.androidfluid.mvp.base.BaseModel;
+import com.androidfluid.mvp.base.BasePresenter;
+import com.androidfluid.mvp.base.BaseView;
+import com.androidfluid.mvp.model.Gank;
 import rx.Observable;
 
 /**

@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.rx;
+package com.androidfluid.mvp.rx;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;

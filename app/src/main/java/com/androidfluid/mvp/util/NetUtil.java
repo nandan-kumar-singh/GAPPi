@@ -2,7 +2,7 @@
  * Copyright (c) 2017. Nandan.
  */
 
-package com.songning.mvp.util;
+package com.androidfluid.mvp.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
