@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">MVP</string>
+    <string name="app_name">GAPPi</string>
     <string name="action_settings">Settings</string>
+    <string name="don_t_blame_us">Don\'t blame us if your data exhausted!</string>
+    <string name="blob_slogan">an aweoo app</string>
+    <string name="gapee">GAPPEE</string>
+    <string name="gappi">GAPPI</string>
 </resources>

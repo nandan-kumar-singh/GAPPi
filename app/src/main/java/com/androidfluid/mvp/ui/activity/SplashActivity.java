@@ -6,21 +6,19 @@ package com.androidfluid.mvp.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.androidfluid.mvp.R;
 import com.androidfluid.mvp.base.BaseActivity;
 import com.androidfluid.mvp.mvp.login.ISplashInteracter;
 import com.androidfluid.mvp.mvp.login.SplashPresenter;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SplashActivity extends BaseActivity<SplashPresenter> implements ISplashInteracter.View {
 
     private boolean isOpen;
-    @BindView(R.id.ivLogo)
-    View view;
+    //@BindView(R.id.ivLogo)
+    //View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

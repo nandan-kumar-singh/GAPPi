@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GAPPi.iml" filepath="$PROJECT_DIR$/GAPPi.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVP.iml" filepath="$PROJECT_DIR$/MVP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
