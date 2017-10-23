@@ -4,7 +4,10 @@
 
 package com.androidfluid.mvp.mvp.login;
 
+import android.os.Handler;
+
 import com.androidfluid.mvp.model.Gank;
+
 import rx.Subscriber;
 import rx.Subscription;
 
@@ -36,10 +39,21 @@ public class SplashPresenter extends ISplashInteracter.Presenter {
 
             @Override
             public void onNext(Gank s) {
-                mView.navigateToHomeScreen();
+                //mView.navigateToHomeScreen();
             }
         });
 
-        addSubscribe(subscription);
+        //addSubscribe(subscription);
+    }
+
+    @Override
+    public void showAppDescription() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mView.goToAppDescription();
+            }
+        },3000);
+
     }
 }

@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidfluid.mvp.R;
@@ -27,7 +26,6 @@ import com.androidfluid.mvp.mvp.main.IMainInteracter;
 import com.androidfluid.mvp.mvp.main.MainPresenter;
 
 import java.util.List;
-import java.util.Random;
 
 
 public class MainActivity extends BaseActivity<MainPresenter>
@@ -38,7 +36,6 @@ public class MainActivity extends BaseActivity<MainPresenter>
     private ProgressBar mDialog;
     private Toolbar mToolbar;
     private FloatingActionButton mFab;
-    private TextView mTextView;
     private DrawerLayout drawerLayout;
 
     @Override
@@ -48,7 +45,6 @@ public class MainActivity extends BaseActivity<MainPresenter>
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
-        mTextView = findViewById(R.id.tv);
         mFab = findViewById(R.id.fab);
 
         mDialog = new ProgressBar(this);
@@ -113,7 +109,6 @@ public class MainActivity extends BaseActivity<MainPresenter>
 
         Toast.makeText(this, "The request was successful", Toast.LENGTH_SHORT).show();
         List<Gank.Result> results = data.getResults();
-        mTextView.setText(results.get(new Random().nextInt(10)).toString());
 
         for (Gank.Result result : results) {
             Log.e(TAG, result.toString());
@@ -133,7 +128,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

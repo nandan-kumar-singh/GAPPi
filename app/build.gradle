@@ -18,9 +18,11 @@ android {
         }
     }
     repositories {
-        maven { url 'https://maven.google.com' }
         jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com' }
+
     }
 }
 
@@ -56,4 +58,10 @@ dependencies {
 
 
     compile 'com.hendraanggrian:reveallayout:0.5.3'
+    //viewpager indicator
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+    //glide
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+
 }

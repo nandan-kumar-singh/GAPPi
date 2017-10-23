@@ -6,5 +6,8 @@
     <color name="colorBlue">#ef202086</color>
     <color name="colorPrimary55">#00c3cF</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteShade">#f3f3f3</color>
+    <color name="blackShade">#5F5F5F</color>
+    <color name="blackLight">#55414141</color>
 
 </resources>

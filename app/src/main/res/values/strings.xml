@@ -5,4 +5,16 @@
     <string name="blob_slogan">an aweoo app</string>
     <string name="gapee">GAPPEE</string>
     <string name="gappi">GAPPI</string>
+    <string name="skip">skip</string>
+    <string name="next">NEXT</string>
+    <array name="app_heading">
+        <item>SIMPLE ABROAD CALLS</item>
+        <item>FREE CALLS AMONG GAPPi’s</item>
+        <item>NO HIDDEN CHARGES OR FEES</item>
+    </array>
+    <array name="app_description">
+        <item>Simple Video calls among friends anywhere in the the world with the ease.</item>
+        <item>if the person you’re calling also has GAPPi the call will be entirely free</item>
+        <item>We just need ur data if you don’t mind.</item>
+    </array>
 </resources>

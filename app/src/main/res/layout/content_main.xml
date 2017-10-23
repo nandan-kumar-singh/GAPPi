@@ -19,14 +19,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:padding="-2dp"
-        android:background="@drawable/rectangle" />
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
