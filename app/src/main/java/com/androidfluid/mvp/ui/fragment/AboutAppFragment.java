@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.androidfluid.mvp.R;
-import com.androidfluid.mvp.logger.Logger;
 import com.androidfluid.mvp.model.Banner;
 import com.androidfluid.mvp.ui.adapter.AboutViewPagerAdapter;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -40,6 +39,7 @@ public class AboutAppFragment extends DialogFragment {
     @BindView(R.id.butSkip)
     Button btnSkip;
 
+    boolean shouldExit=false;
 
     public static AboutAppFragment getInstance() {
         return new AboutAppFragment();
@@ -86,12 +86,10 @@ public class AboutAppFragment extends DialogFragment {
         Banner banner = null;
         for (int i = 0; i < appHeading.length; i++) {
             banner = new Banner();
-
             banner.setHeaderText(appHeading[i]);
             banner.setDesctiptionText(appDescription[i]);
             banner.setLImageUrl(imageSlidesL[i]);
             banner.setRImageUrl(imageSlidesR[i]);
-
             bannerList.add(banner);
         }
 
@@ -100,20 +98,23 @@ public class AboutAppFragment extends DialogFragment {
         pageIndicator.setViewPager(vpAboutApp);
         vpAboutApp.setOffscreenPageLimit(1);
 
-
     }
 
     @OnClick({R.id.butSkip, R.id.btnNext})
-   public void onClick(View view) {
+    public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnNext: {
-                //vpAboutApp.setCurrentItem(vpAboutApp.getCurrentItem()+1,true);
-                Logger.log(TAG,"Onclicked");
+                if(shouldExit){
+                    getDialog().dismiss();
+                }
+                vpAboutApp.setCurrentItem(vpAboutApp.getCurrentItem()+1,true);
+                if(vpAboutApp.getCurrentItem()==vpAboutApp.getAdapter().getCount()-1){
+                    shouldExit=true;
+                }
                 break;
             }
             case R.id.butSkip: {
-                Logger.log(TAG,"Onclicked");
-
+                getDialog().dismiss();
                 break;
             }
         }

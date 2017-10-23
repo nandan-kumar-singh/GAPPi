@@ -11,7 +11,6 @@ import com.androidfluid.mvp.R;
 import com.androidfluid.mvp.base.BaseActivity;
 import com.androidfluid.mvp.mvp.login.ISplashInteracter;
 import com.androidfluid.mvp.mvp.login.SplashPresenter;
-import com.androidfluid.mvp.ui.fragment.AboutAppFragment;
 
 import butterknife.ButterKnife;
 
@@ -27,7 +26,6 @@ public class SplashActivity extends BaseActivity<SplashPresenter> implements ISp
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
         mPresenter.showSplash();
-        mPresenter.showAppDescription();
 
     }
 
@@ -59,12 +57,5 @@ public class SplashActivity extends BaseActivity<SplashPresenter> implements ISp
 
     }
 
-    @Override
-    public void goToAppDescription() {
-        android.support.v4.app.FragmentManager fragmentManager=getSupportFragmentManager();
-        AboutAppFragment aboutAppFragment=AboutAppFragment.getInstance();
-        aboutAppFragment.show(fragmentManager,"about-app");
-        aboutAppFragment.setCancelable(true);
-    }
 
 }

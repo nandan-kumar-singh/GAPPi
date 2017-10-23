@@ -7,6 +7,7 @@
     <string name="gappi">GAPPI</string>
     <string name="skip">skip</string>
     <string name="next">NEXT</string>
+    <string name="app_description">app_description</string>
     <array name="app_heading">
         <item>SIMPLE ABROAD CALLS</item>
         <item>FREE CALLS AMONG GAPPi’s</item>

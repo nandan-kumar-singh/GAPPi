@@ -71,7 +71,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="38dp"
         android:alpha=".3"
         android:text="@string/gapee"
         android:textColor="@color/colorWhite"

@@ -21,7 +21,7 @@ public interface ISplashInteracter {
         void showProgress();
         void hideProgress();
         void onFail(String errorLog);
-        void goToAppDescription();
+
     }
 
     interface Model extends BaseModel {
@@ -30,6 +30,6 @@ public interface ISplashInteracter {
 
     abstract class Presenter extends BasePresenter<View, Model> {
         public abstract void showSplash();
-        public abstract void showAppDescription();
+
     }
 }
